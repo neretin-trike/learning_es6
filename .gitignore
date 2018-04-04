@@ -10,3 +10,7 @@ node_modules
 # Временные файлы
 *.tmp
 *~
+
+# Игнорирую файлы ES5
+dist
+public/dist
