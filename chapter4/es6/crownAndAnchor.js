@@ -11,7 +11,7 @@ const bets = {
 	diamond: 0 
 };
 
-while (fund > 1 && funds < 100) {
+while (funds > 1 && funds < 100) {
 
 	let totalBet = rand(1, funds);
 
@@ -25,6 +25,19 @@ while (fund > 1 && funds < 100) {
 
 	funds = funds - totalBet;
 	
+	let remaining = totalBet;	
+	do {
+		let bet = rand(1, remaining);
+		let face = randFace();
+		bets[face] = bets[face] + bet;
+		remaining = remaining - bet;
+	} while (remaining > 0);
+
+	const hand = [];
+
+	for (let roll = 0; roll<3; roll++) {
+		hand.push(randFace());
+	}
 }
 
 function rand(m,n) {
@@ -32,5 +45,5 @@ function rand(m,n) {
 }
 
 function randFace() {
-	return ["crown", "anchor", "heart", "spade", "club", "diamond"] [rabd (0,5)];
+	return ["crown", "anchor", "heart", "spade", "club", "diamond"] [rand (0,5)];
 }
