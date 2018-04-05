@@ -2,7 +2,7 @@
 *.log
 
 # Зависимости проекта
-chapter2/node_modules
+**/node_modules
 
 # Атрибуты папки OSX
 .DS_Store
@@ -12,5 +12,5 @@ chapter2/node_modules
 *~
 
 # Игнорирую файлы ES5
-chapter2/dist
-chapter2/public/dist
+**/dist
+**/public/dist
