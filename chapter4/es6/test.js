@@ -1,18 +1,16 @@
 "use strict";
 
-// средство es6: блок "левых" объявлений
-const sentences = [
-	{ subject: "JavaScript", verb: "is", object: "great" },
-	{ subject: "Elephants", verb: "are", object: "large" },
-];
+let funds = 50;
 
-// средство es6: деструктуризация объекта
-function say ( {subject, verb, object } ) {
-	// средство es6: строки шаблона
-	console.log(`${subject} ${verb} ${object}`);
+while (fund > 1 && funds < 100) {
+	funds = funds + 2;
+	funds = funds - 1;
 }
 
-// средство es6: for .. of
-for (let s of sentences) {
-	say (s);
+function rand(m,n) {
+	return m + Math.floor((n - m + 1)*Math.random());
+}
+
+function randFace() {
+	return ["crown", "anchor", "heart", "spade", "club", "diamond"] [rabd (0,5)];
 }
